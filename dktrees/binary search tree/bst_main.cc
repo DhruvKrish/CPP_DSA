@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <stdlib.h>
-#include "bst.cc"
+#include "bst.h"
 
 int main(int argc, char* argv[]) {
   using namespace dk;
