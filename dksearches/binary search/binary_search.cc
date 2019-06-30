@@ -2,6 +2,8 @@
 
 using namespace std;
 
+namespace dk{
+
 int BinarySearch(int *array, int lo, int hi, int value){
   if(hi < lo){
     return -1;
@@ -39,14 +41,4 @@ int BinarySearchIterative(int *array, int lo, int hi, int value){
   return -1;
 }
 
-int main(){
-  int arr[]={1,2,3,22, 26, 78, 45};
-
-  cout<<BinarySearch(arr, 0, sizeof(arr)/sizeof(int), 78)<<endl;
-  cout<<BinarySearchIterative(arr, 0, sizeof(arr)/sizeof(int), 78)<<endl;
-
-  cout<<BinarySearch(arr, 0, sizeof(arr)/sizeof(int), 23)<<endl;
-  cout<<BinarySearch(arr, 0, sizeof(arr)/sizeof(int), 23)<<endl;
-
-  return 0;
 }

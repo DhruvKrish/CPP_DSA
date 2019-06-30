@@ -4,6 +4,7 @@
 
 namespace dk{
   int BinarySearch(int *array, int lo, int hi, int value);
+  int BinarySearchIterative(int *array, int lo, int hi, int value);
 
 } //namespace dk
 
