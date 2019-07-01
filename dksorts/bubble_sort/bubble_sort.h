@@ -4,6 +4,7 @@
 
 namespace dk{
   void BubbleSort(int *array, int n);
+  void BubbleSortRecursive(int *array, int n);
   void Swap(int *a, int *b);
 }
 

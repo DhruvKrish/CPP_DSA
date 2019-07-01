@@ -4,6 +4,7 @@
 int main(){
 
   int to_sort[10] = {613, 55, 8721, 472, 94, 72, 74, 8, 61, 356};
+  int to_sort_recursive[10] = {613, 55, 8721, 472, 94, 72, 74, 8, 61, 356};
   int sorted[10] = {8, 55, 61, 72, 74, 94, 356, 472, 613, 8721};
 
   std::cout<<"To Sort: ";
@@ -13,12 +14,18 @@ int main(){
   std::cout<<std::endl;
 
   dk::BubbleSort(to_sort, 10);
+  dk::BubbleSortRecursive(to_sort_recursive,10);
 
   std::cout<<"Sorted: ";
   for(int i=0;i<10;i++){
     std::cout<<to_sort[i]<<" ";
   }
+  std::cout<<std::endl;
 
+  std::cout<<"Recursive Sorted: ";
+  for(int i=0;i<10;i++){
+    std::cout<<to_sort_recursive[i]<<" ";
+  }
   std::cout<<std::endl;
 
   assert(
