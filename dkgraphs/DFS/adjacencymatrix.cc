@@ -33,7 +33,6 @@ int main(){
   cout<<"    '\n";
 
   AddEdge(0, 1);
-  AddEdge(0, 2);
   AddEdge(1, 2);
   AddEdge(2, 0);
   AddEdge(2, 3);
