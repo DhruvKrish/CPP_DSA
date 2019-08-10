@@ -6,8 +6,7 @@ using namespace std;
 
 //Adjacency list base array
 vector<int> adj[100];
-//Visited array
-int visited[100]={0};
+
 //Level array
 int level[100];
 //Check if bipartite
@@ -21,7 +20,6 @@ void AddEdge(int u, int v){
 //BFS graph with number of nodes n from source s.
 void isBipartite(int s, int n){
   for(int i=0;i<n;i++){
-    visited[i]=0;
     color[i]=-1;
   }
 
@@ -30,7 +28,6 @@ void isBipartite(int s, int n){
   queue<int> Q;
   Q.push(s);
   color[s]=0;
-  visited[s]=1;
   //Source is 0th level
   level[s]=0;
   int flag=0;
@@ -49,6 +46,8 @@ void isBipartite(int s, int n){
           else{
             color[v]=0;
           }
+
+          Q.push(v);
         }
         else{
           if(color[v]==color[u]){
@@ -59,8 +58,6 @@ void isBipartite(int s, int n){
 
         //Considering one level after previous
         level[v]=level[u]+1;
-        visited[v]=1;
-        Q.push(v);
 
     }
     if(flag==1){
