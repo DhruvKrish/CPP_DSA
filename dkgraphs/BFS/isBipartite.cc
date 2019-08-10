@@ -37,10 +37,9 @@ void isBipartite(int s, int n){
 
   while(!Q.empty()){
     int u=Q.front();
-    cout<<u<<" ";
+    //cout<<u<<" ";
 
     for(int i=0;i<adj[u].size();i++){
-      if(visited[adj[u][i]]==0){
         int v=adj[u][i];
         //Check color
         if(color[v]==-1){
@@ -62,7 +61,7 @@ void isBipartite(int s, int n){
         level[v]=level[u]+1;
         visited[v]=1;
         Q.push(v);
-      }
+
     }
     if(flag==1){
       break;
@@ -73,6 +72,7 @@ void isBipartite(int s, int n){
 
   if(flag==1){
     cout<<"Not Bipartite"<<endl;
+    return;
   }
 
   cout<<endl;
@@ -92,11 +92,11 @@ int main()
   cout<<"    '\n";
 
     AddEdge(0, 1);
-    AddEdge(0, 2);
+    //AddEdge(0, 2);
     AddEdge(1, 2);
     AddEdge(2, 0);
     AddEdge(2, 3);
-    AddEdge(3, 3);
+    //AddEdge(3, 3);
 
     isBipartite(0, 4);
     return 0;
